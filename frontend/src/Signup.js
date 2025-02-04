@@ -25,7 +25,7 @@ const Signup = () => {
 
         // If no validation errors, make the API call
         if (!validationErrors.name && !validationErrors.email && !validationErrors.password) {
-            axios.post('https://loginandregistration-1.onrender.com/signup', values)
+            axios.post('http://localhost:8081/signup', values)
                 .then(res => {
                     // Navigate to Login page after successful signup
                     navigate('/');

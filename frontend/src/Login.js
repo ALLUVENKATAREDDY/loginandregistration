@@ -23,7 +23,7 @@ const Login = () => {
 
         // If no validation errors, make the API call
         if (!validationErrors.email && !validationErrors.password) {
-            axios.post('https://loginandregistration-1.onrender.com/login', values)
+            axios.post('http://localhost:8081/login', values)
                 .then(res => {
                     if (res.data === "SUCCESS") {
                         navigate("/home");
