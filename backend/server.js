@@ -7,10 +7,13 @@ app.use(cors());
 app.use(express.json())
 
 const db = mysql.createConnection({
-    host: "localhost",
+    host: "mysql://root:kMUasdifpvaVcmRTPOqEiqWrcjzznKAA@autorack.proxy.rlwy.net:41746/railway",
     user: "root",
     password: "",
-    database: "signup1"
+    database: "signup1",
+      waitForConnections: true,
+  connectionLimit: 10,
+  queueLimit: 0,
 })
 
 app.post("/signup", (req, res) => {
